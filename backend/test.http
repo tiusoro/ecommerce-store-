@@ -1,0 +1,60 @@
+@baseUrl = http://localhost:8000/api/v1
+@contentType = application/json
+
+### ============================================================================
+### AUTHENTICATION (backend/routes/auth.js)
+### ============================================================================
+
+# @name register
+# ⚠️ Constraints: Name, Email, and Password must be at least 6 characters long.
+POST {{baseUrl}}/user/register
+Content-Type: {{contentType}}
+
+{
+    "name": "DevOps Engineer",
+    "email": "devops@example.com",
+    "password": "password123"
+}
+
+###
+
+# @name login
+# Returns 'auth-token' in header and body.
+POST {{baseUrl}}/user/login
+Content-Type: {{contentType}}
+
+{
+    "email": "devops@example.com",
+    "password": "password123"
+}
+
+###
+
+### ============================================================================
+### PRODUCTS & CATEGORIES (backend/routes/product.js)
+### ============================================================================
+
+# Get all products
+# Note: Source code suggests this currently returns an empty array [] by default[cite: 46].
+GET {{baseUrl}}/product
+Content-Type: {{contentType}}
+
+###
+
+# Get all categories
+# Note: Source code suggests this currently returns an empty array [] by default[cite: 47].
+GET {{baseUrl}}/category
+Content-Type: {{contentType}}
+
+###
+
+# Get products by specific category route name
+# Valid examples from frontend data: hats, sneakers, jackets, womens, mens[cite: 158].
+GET {{baseUrl}}/product/hats
+Content-Type: {{contentType}}
+
+###
+
+# Get products by another category (Sneakers)
+GET {{baseUrl}}/product/sneakers
+Content-Type: {{contentType}}
