@@ -11,8 +11,8 @@ POST {{baseUrl}}/user/register
 Content-Type: {{contentType}}
 
 {
-    "name": "DevOps Engineer",
-    "email": "devops@example.com",
+    "name": "Anthony Usoro",
+    "email": "titalearning@gmail.com",
     "password": "password123"
 }
 
@@ -24,7 +24,7 @@ POST {{baseUrl}}/user/login
 Content-Type: {{contentType}}
 
 {
-    "email": "devops@example.com",
+    "email": "titalearning@gmail.com",
     "password": "password123"
 }
 
