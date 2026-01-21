@@ -1,5 +1,8 @@
+require("dotenv/config");
 const express = require("express");
 const PORT = process.env.PORT || 5000;
+console.log("port: ", PORT);
+/* console.log("connection point: ", connected to db); */
 const app = express();
 require("./db");
 const productRoute = require("./routes/product");
